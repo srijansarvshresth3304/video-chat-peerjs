@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Video Call App</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1>Video Chat App</h1>
+
+    <div id="main-cont">
+        <p>Your ID: <span id="my-id"></span></p>
+        <input type="text" id="peer-id-input" placeholder="Enter peer ID to call">
+        <button id="call-btn">📞 Call</button>
+        <button id="end-btn">❌ End</button>
+        <button id="toggle-mic">🎙️ Mute</button>
+        <button id="toggle-cam">📷 Off</button>
+
+    </div>
+    <div>
+        <h3>My Video:</h3>
+        <video id="my-video" autoplay muted></video>
+    </div>
+
+    <div>
+        <h3>Remote Video:</h3>
+        <video id="remote-video" autoplay></video>
+    </div>
+
+    <script src="https://unpkg.com/peerjs@1.5.2/dist/peerjs.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>

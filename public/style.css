@@ -1,0 +1,199 @@
+/* Reset styles */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and background */
+body {
+    min-height: 100vh;
+    width: 100vw;
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    background: radial-gradient(ellipse at 40% 10%, #292e49 60%, #1d2232 100%);
+    color: #eef1f8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 32px 12px;
+}
+
+/* App Heading */
+h1 {
+    font-size: 2.9rem;
+    font-weight: 900;
+    letter-spacing: .08em;
+    color: #64b5f6;
+    padding-bottom: 1.5rem;
+    text-shadow: 0 1px 16px #22242c98;
+}
+
+/* MainCard */
+#main-cont {
+    max-width: 430px;
+    width: 98%;
+    margin: 0 auto 2.2rem auto;
+    background: linear-gradient(135deg, rgba(36, 39, 56, .88) 80%, rgba(58, 66, 108, 0.72) 100%);
+    border-radius: 22px;
+    box-shadow: 0 8px 40px #14151e50, 0 1.5px 0px #1e2236ae inset;
+    padding: 2rem 1.2rem 1.6rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.45rem;
+}
+
+#main-cont p {
+    width: 100%;
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 0.6rem;
+    letter-spacing: 0.06em;
+}
+
+#main-cont p span {
+    background: #282e52;
+    font-weight: bold;
+    color: #2074df;
+    border-radius: 11px;
+    padding: 3px 12px 3px 14px;
+    letter-spacing: 0.07em;
+    font-size: 1.04em;
+}
+
+input[type='text'] {
+    width: 90%;
+    font-size: 1.15rem;
+    padding: 0.95rem 1.3rem;
+    border-radius: 8px;
+    border: 1.5px solid #283558;
+    background: #232840;
+    outline: none;
+    color: #d6e6f7;
+    margin-bottom: 0.8rem;
+    transition: border 0.23s;
+    box-shadow: 0px 3px 10px #0a1b2f27;
+}
+
+input[type='text']:focus {
+    border-color: #4fc3f7;
+    background: #28304a;
+    color: #fff;
+}
+
+#main-cont button {
+    min-width: 52px;
+    font-size: 1.13rem;
+    margin: 0 5px;
+    padding: 0.8rem 1.4rem;
+    border-radius: 7.5px;
+    background: linear-gradient(90deg, #24296e 20%, #1273cf 120%);
+    color: #fff;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    letter-spacing: .03em;
+    transition:
+        background 0.20s,
+        transform 0.11s,
+        box-shadow 0.19s;
+    box-shadow: 0 1.5px 8px #2331611a;
+    cursor: pointer;
+}
+
+#main-cont button:hover,
+#main-cont button:focus-visible {
+    background: linear-gradient(90deg, #2196f3 20%, #04b3e4 120%);
+    color: #24263a;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 1.5px 18px #1db8ff55;
+}
+
+#main-cont button:active {
+    transform: scale(.97);
+}
+
+/* Video sections */
+h3 {
+    margin: 1rem 0 0.7rem 0;
+    font-size: 1.35rem;
+    color: #43d7e9;
+    letter-spacing: .02em;
+    font-weight: 700;
+    text-shadow: 0 2px 9px #1c223e60;
+}
+
+video {
+    width: 96vw;
+    max-width: 410px;
+    height: 240px;
+    background: #10131d;
+    object-fit: cover;
+    border-radius: 14.5px;
+    margin-bottom: 1.8rem;
+    box-shadow: 0px 4px 24px #2a467056, 0 1px 0px #1c192d90 inset;
+    border: 2.5px solid #175cad55;
+    transition: border 0.23s;
+}
+
+#my-video {
+    transform: scaleX(-1);
+    border: 2.5px solid #00eecb87;
+}
+
+#remote-video {
+    border: 2.5px solid #5383fc80;
+}
+
+/* Responsive tweaks */
+@media (max-width: 580px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    #main-cont {
+        padding: 1.2rem 0.6rem 1.1rem 0.6rem;
+        border-radius: 2.8vw;
+    }
+
+    video {
+        max-width: 99vw;
+        height: 36vw;
+        min-height: 140px;
+        border-radius: 10.5px;
+        margin-bottom: 1.1rem;
+    }
+
+    h3 {
+        font-size: 1.09rem;
+    }
+
+    #main-cont button {
+        padding: 0.7rem 0.6rem;
+        font-size: 1rem;
+        margin-bottom: 0.55rem;
+    }
+}
+
+/* Nice scrollbars for Chrome/Edge (optional) */
+body::-webkit-scrollbar,
+html::-webkit-scrollbar {
+    width: 8px;
+    background: #1a1e2f;
+}
+
+body::-webkit-scrollbar-thumb,
+html::-webkit-scrollbar-thumb {
+    background: #273457;
+    border-radius: 6.5px;
+}
+
+/* Hide number input arrows, just in case */
+input[type='text']::-webkit-outer-spin-button,
+input[type='text']::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
