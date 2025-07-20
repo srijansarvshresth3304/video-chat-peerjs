@@ -13,9 +13,11 @@ let currentCall;
 // PeerJS connection
 const peer = new Peer(undefined, {
   host: location.hostname,
-  port: location.port || 3000,
+  port: location.port || (location.protocol === "https:" ? 443 : 80),
   path: "/peerjs",
+  secure: location.protocol === "https:",
 });
+
 
 navigator.mediaDevices
   .getUserMedia({ video: true, audio: true })
